@@ -25,3 +25,13 @@ trash can again.
 .Additional resource
 
 <<available-transformations>>
+
+In addition to the list of fixed transformations, users may define their own custom field
+action transformations.  These custom field actions are written in Java and then imported
+into the AtlasMap data mapper.  Once established in a panel the transformation will appear
+in the standard list of transformations.  Lets examine an example:
+
+.Procedure
+
+. Create a transformation.
+
