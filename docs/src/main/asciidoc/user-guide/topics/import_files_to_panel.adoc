@@ -76,24 +76,23 @@ class.  Lets examine each file type independently.
     }
   }
 ```
-+
 Lets say we'd like to import this file into the AtlasMap *Source* panel.  Simply select the import icon
 at the head of the panel.
-+
+
 image:../images/ImportJSON1.png[Import a JSON File to Source Panel]
-+
+
 An 'Open File' dialog appears.  Select the location for JSONSchema.json.
-+
+
 image:../images/ImportJSON2.png[Import a JSON File to Source Panel - Open File Dialog]
-+
+
 The fields now appear in the *Source* panel as you've defined them in the imported JSON schema.
-+
+
 image:../images/ImportJSON3.png[Import a JSON File to Source Panel - Import Complete]
-+
+
 Now lets import an XML schema into the *Target* panel.  
-+
-* XML Schema File: XMLSchema.xml
-+
+
+* XML Schema File: *XMLSchema.xml*
+
 ```
 <d:SchemaSet xmlns:d="http://atlasmap.io/xml/schemaset/v2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <xsd:schema targetNamespace="http://syndesis.io/v1/swagger-connector-template/request" elementFormDefault="qualified">
@@ -155,22 +154,21 @@ Now lets import an XML schema into the *Target* panel.
     </d:AdditionalSchemas>
   </d:SchemaSet>
 ```
-+
-. As was done in the previous JSON file import, select the import icon this time in the *Target* panel.
-+
+As was done in the previous JSON file import, select the import icon this time in the *Target* panel.
+
 image:../images/ImportXML1.png[Import an XML File to Target Panel]
-+
-An 'Open File' dialog appears.  Select the location for XMLSchema.xml.
+
+An *Open File* dialog appears.  Select the location for XMLSchema.xml.
 The fields now appear in the *Target* panel as you've defined them in the imported XML schema.  The fields
 are expanded to show more detail.
-+
+
 image:../images/ImportXML2.png[Import of an XML File to Target Panel Complete]
-+
-. Instance files are imported in precisely the same manner.  These files define a separate namespace
+
+Instance files are imported in precisely the same manner.  These files define a separate namespace
 which also defines a few special attributes.  For example:
-+
-* JSON Schema Instance File: JSONSchemaInst.json
-+
+
+* JSON Schema Instance File: *JSONSchemaInst.json*
+
 ```
    {
         "order": {
@@ -200,9 +198,8 @@ which also defines a few special attributes.  For example:
         ]
     }
 ```
+* XML Schema Instance File: *XMLSchemaInst.xml*
 
-* XML Schema Instance File: XMLSchemaInst.xml
-+
 ```
  <ns:XmlOE xmlns:ns="http://atlasmap.io/xml/test/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://atlasmap.io/xml/test/v2 atlas-xml-test-model-v2.xsd ">
@@ -222,16 +219,14 @@ which also defines a few special attributes.  For example:
     </ns:Contact>
   </ns:XmlOE>
 ```
-+
 Using the same procedure as before, these files may be imported into either the *Source* or *Target*
 panel.
-+
+
 There does exist one other method for establishing mappable fields within the AtlasMap data mapper.
 A Java class can be established where each field is represented as a class-wide public entity.  Arrays
 and data types are more discretely defined.  For example:
-+
+
 * Java File: *Bicycle.java*
-+
 ```
 package io.paul;
 import io.paul.GeoLocation;
@@ -245,9 +240,7 @@ public class Bicycle {
     public GeoLocation geoLocation;
 }
 ```
-
 * Java File: *GeoLocation.java*
-+
 ```
 package io.paul;
 
@@ -257,36 +250,35 @@ public class GeoLocation {
 }
 ```
 Compile the Java files and assemble the results into a Java archive file (i.e. Bicycle.jar).  Here's a hint:
-+
 ```
 javac -cp io.paul:. -d . GeoLocation.java Bicycle.java 
 jar cvf ../Bicycle.jar *
 ```
 Now you can import the Bicycle.jar archive into AtlasMap.  The import procedure is slightly different for
 Java class archives.  You must:
-+
-. Import the file into AtlasMap.  Select the import icon *on the main tool bar*, not on
+
+Import the file into AtlasMap.  Select the import icon *on the main tool bar*, not on
 the panel.
-+
+
 image:../images/ImportJavaClass1.png[Import a Java Class Archive File to Source Panel]
-+
+
 An 'Open File' dialog appears.  Select the location for Bicycle.jar.
-+
+
 image:../images/ImportJavaClass2.png[Import a Java Class Archive File to Source Panel - Open Dialog]
-+
-. Select the plus icon (+) on the *Source* or *Target* panel.
-+
+
+Select the plus icon (+) on the *Source* or *Target* panel.
+
 image:../images/ImportJavaClass3.png[Enable a class package in a previously imported JAR]
-+
+
 A dialog appears "Establish your class in the Sources panel."
 In the *Class package name:* input field, enter the class package name of the Java class you've defined.
 In the Bicycle.jar example, the class package name is `io.paul.Bicycle`.  
-+
+
 image:../images/ImportJavaClass4.png[Enable a class package in a previously imported JAR]
-+
+
 You will now see the fields you created in your Java class file appear in the selected panel.
-+
+
 image:../images/ImportJavaClass5.png[Class Package Enablement Complete]
-+
+
 You now defined the source and target data shapes.  Time to do some mapping!
 
