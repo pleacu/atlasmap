@@ -5,7 +5,7 @@ Data mapping fundamentally involes morphing one data shape into another.  A user
 defines these shapes using XML schemas, JSON notation or by establishing a simple Java
 class.  Lets examine each file type independently.
 
-* JSON Schema File: JSONSchema.json
+* JSON Schema File: *JSONSchema.json*
 
 ```
   {
@@ -81,7 +81,7 @@ at the head of the panel.
 
 image:../images/ImportJSON1.png[Import a JSON File to Source Panel]
 
-An 'Open File' dialog appears.  Select the location for JSONSchema.json.
+An *Open File* dialog appears.  Select the location for JSONSchema.json.
 
 image:../images/ImportJSON2.png[Import a JSON File to Source Panel - Open File Dialog]
 
@@ -262,7 +262,7 @@ the panel.
 
 image:../images/ImportJavaClass1.png[Import a Java Class Archive File to Source Panel]
 
-An 'Open File' dialog appears.  Select the location for Bicycle.jar.
+An *Open File* dialog appears.  Select the location for Bicycle.jar.
 
 image:../images/ImportJavaClass2.png[Import a Java Class Archive File to Source Panel - Open Dialog]
 
@@ -280,5 +280,5 @@ You will now see the fields you created in your Java class file appear in the se
 
 image:../images/ImportJavaClass5.png[Class Package Enablement Complete]
 
-You now defined the source and target data shapes.  Time to do some mapping!
+You have now defined the source and target data shapes.  Time to do some mapping!
 
