@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 import {
   Button,
   Toolbar,
@@ -26,16 +26,11 @@ export const CanvasViewToolbar: FunctionComponent<ICanvasViewToolbarProps> = ({
   onGetMappingExpressionStr,
   onToggleExpressionMode,
 }) => {
-  /*
-  const [condExprEnabled, setCondExprEnabled] = useState(
-    onConditionalMappingExpressionEnabled()
-  );
+  const [condExprEnabled, setCondExprEnabled] = useState<boolean>(() => {
+    const initialState = onConditionalMappingExpressionEnabled();
+    return initialState;
+  });
 
-  const condExprEnabledRef = useRef<boolean>(
-    onConditionalMappingExpressionEnabled()
-  );
-  */
-  let condExprEnabled = onConditionalMappingExpressionEnabled();
   return (
     <Toolbar
       className={css('view-toolbar pf-u-px-md pf-u-py-md', styles.toolbar)}
@@ -47,24 +42,21 @@ export const CanvasViewToolbar: FunctionComponent<ICanvasViewToolbarProps> = ({
             aria-label="Enable/ Disable conditional mapping expression"
             onClick={() => {
               onToggleExpressionMode();
-              // setCondExprEnabled(onConditionalMappingExpressionEnabled());
-              condExprEnabled = onConditionalMappingExpressionEnabled();
+              setCondExprEnabled(onConditionalMappingExpressionEnabled());
             }}
-            disabled={!onConditionalMappingExpressionEnabled()}
+            disabled={!condExprEnabled}
           >
             <i>
               f<sub>(x)</sub>
             </i>
           </Button>
         </ToolbarItem>
+        {console.log('condExprEnabled: ' + condExprEnabled)}
         {condExprEnabled && (
           <ToolbarItem className={css(styles.toolbarItem)}>
             <ConditionalExpression
               expressionTokens={expressionTokens}
               condExprEnabled={condExprEnabled}
-              onConditionalMappingExpressionEnabled={
-                onConditionalMappingExpressionEnabled
-              }
               onGetMappingExpressionStr={onGetMappingExpressionStr}
             />
           </ToolbarItem>

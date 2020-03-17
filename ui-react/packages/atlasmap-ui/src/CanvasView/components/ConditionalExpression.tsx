@@ -4,14 +4,12 @@ import { TextInput } from '@patternfly/react-core';
 export interface IConditionalExpressionProps {
   expressionTokens: string[];
   condExprEnabled: boolean;
-  onConditionalMappingExpressionEnabled: () => boolean;
   onGetMappingExpressionStr: () => string;
 }
 
 export const ConditionalExpression: FunctionComponent<IConditionalExpressionProps> = ({
   // expressionTokens,
   condExprEnabled,
-  // onConditionalMappingExpressionEnabled,
   onGetMappingExpressionStr,
 }) => {
   return (
