@@ -38,7 +38,7 @@
     "pako": "^2.0.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "rxjs": "^6.6.7",
+    "rxjs": "^7.0.1",
     "text-encoding": "^0.7.0"
   },
   "devDependencies": {
@@ -55,7 +55,7 @@
   },
   "peerDependencies": {
     "react": "^17.0.2",
-    "rxjs": "^6.6.7"
+    "rxjs": "^7.0.1"
   },
   "resolutions": {
     "jest": "24.9.0",
