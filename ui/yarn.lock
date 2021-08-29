@@ -2712,28 +2712,28 @@
   dependencies:
     "@octokit/openapi-types" "^7.0.0"
 
-"@patternfly/react-core@^4.147.0":
-  version "4.147.0"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-4.147.0.tgz#da1f1772a0411ff5c3e9d9e5dca397adb89c98ff"
-  integrity sha512-t0GQvmN7vjSJHW9+kiQW2UOLKitNzvr9umNGG3H+gxO/XjgqqH2JmhitN+556gM1+tUYY78yam4wCTTg5P5jOA==
+"@patternfly/react-core@^4.147.0", "@patternfly/react-core@^4.152.4":
+  version "4.152.4"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-4.152.4.tgz#fa008d155ab0c4161aab27bb67ad88fb8689dee2"
+  integrity sha512-saMnAoF3KnYB5k6K04Y6NtO61bXYl71yzGPYSrM/DjyWDlIGLqPPhMe4kbWafLTpSgJdkxPoODgVMDp2ZIJ0Jw==
   dependencies:
-    "@patternfly/react-icons" "^4.11.8"
-    "@patternfly/react-styles" "^4.11.8"
-    "@patternfly/react-tokens" "^4.12.9"
+    "@patternfly/react-icons" "^4.11.14"
+    "@patternfly/react-styles" "^4.11.13"
+    "@patternfly/react-tokens" "^4.12.15"
     focus-trap "6.2.2"
     react-dropzone "9.0.0"
     tippy.js "5.1.2"
-    tslib "1.13.0"
+    tslib "^2.0.0"
 
-"@patternfly/react-icons@^4.11.8":
-  version "4.11.8"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-4.11.8.tgz#1b54bf5ecd00333ff53164ef432f72068be9e669"
-  integrity sha512-xcF0sDrUcuCLncodIqCb3Z9KomOOQjBRXm9m3qCzPMVoI702GbjFbujqoCZJUpcdmPsQzgp+nZGjBZIuRBbTAA==
+"@patternfly/react-icons@^4.11.14", "@patternfly/react-icons@^4.11.8":
+  version "4.11.14"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-4.11.14.tgz#ef7a2de3f78d5bd83715afb9651a185a89901c22"
+  integrity sha512-SBwID1p+UaQ9BSmzIRFr+BJEhYgx1rWHlm2HIZzhoz7BG3Q7byaQ8ZNfZLm0D+ZGVJQ+fq0zUHGE1nzxDPFqNQ==
 
-"@patternfly/react-styles@^4.11.8":
-  version "4.11.8"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-4.11.8.tgz#13e0d676a4fdf6644f39c39fff0d68966891e602"
-  integrity sha512-JSSBqZ6LvZxRdaNvezSRV7dIMK+hLc9lL1RTLCQDRZq2OllR6CDSh1OePsBa22jBWXmXwpL/z7anJsm3F59SMw==
+"@patternfly/react-styles@^4.11.13", "@patternfly/react-styles@^4.11.8":
+  version "4.11.13"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-4.11.13.tgz#6595adc5ff40585add0128d27d420322b65b86a9"
+  integrity sha512-svhnWIqZwJt1cOxwYjvz6lVYeL+c9D17xpKqlkJapXRxJL3ppTfIqwBrT3o9+02ElaXUTKt4xjMkSnEVjw4qxA==
 
 "@patternfly/react-table@^4.29.37":
   version "4.29.37"
@@ -2747,19 +2747,24 @@
     lodash "^4.17.19"
     tslib "1.13.0"
 
+"@patternfly/react-tokens@^4.12.15":
+  version "4.12.15"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-4.12.15.tgz#af760a1b378edce85fd2f7394553911b6ee3c4f0"
+  integrity sha512-lRW0qxGjuFEPMweBSQFHNRNoxavx5uR8b28f0lPN0Jlz4QsaCFVTmHM2XqflOHDpjE8SPJW/hJMSsyUrqnM5dw==
+
 "@patternfly/react-tokens@^4.12.9":
   version "4.12.9"
   resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-4.12.9.tgz#122d92efe1f5545195961129db18a81eb27cf47b"
   integrity sha512-9bf3v4Wt+j70DppkptAJfJqpztd2MFH/VzrBqzPjL4OBtyWNenRKcLeJhdZGRuT7ZGKLfd7z3s5/5ApK1bGGzQ==
 
 "@patternfly/react-topology@^4.9.42":
-  version "4.9.42"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-topology/-/react-topology-4.9.42.tgz#b784c38875c4b2f0e0c278102d31b3a055c39fc6"
-  integrity sha512-ggvmdhdpfaB+o7k02xcCCtQr7fOWpE8BWVkMg9U7VRBuBqVcP7uIVH8+a2yK6qr+ChkB5Sk6+621ZaAsDNZ7dA==
+  version "4.9.62"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-topology/-/react-topology-4.9.62.tgz#32316b22e97771c3e2f6d92d09a95caa00340369"
+  integrity sha512-0UoIfyldWwLmCHIb+F+a5vsjVKWVGMEFFbDHq6u/tO3WG8/wsbaf8o0JY3G6+/jKSkFEv7wK/ljHLchFvJbWYQ==
   dependencies:
-    "@patternfly/react-core" "^4.147.0"
-    "@patternfly/react-icons" "^4.11.8"
-    "@patternfly/react-styles" "^4.11.8"
+    "@patternfly/react-core" "^4.152.4"
+    "@patternfly/react-icons" "^4.11.14"
+    "@patternfly/react-styles" "^4.11.13"
     "@types/d3" "^5.7.2"
     "@types/d3-force" "^1.2.1"
     "@types/dagre" "0.7.42"
@@ -2773,7 +2778,7 @@
     point-in-svg-path "^1.0.1"
     popper.js "^1.16.1"
     react-measure "^2.3.0"
-    tslib "1.13.0"
+    tslib "^2.0.0"
     webcola "3.4.0"
 
 "@pmmmwh/react-refresh-webpack-plugin@^0.4.3":
