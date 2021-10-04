@@ -2,6 +2,7 @@ const postcss = require("rollup-plugin-postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const postcssurl = require("postcss-url");
+const monacoWebpackPlugin = require('monaco-editor-webpack-plugin')
 
 module.exports = {
   rollup(config, options) {
@@ -23,4 +24,7 @@ module.exports = {
     );
     return config;
   },
+  plugins: [
+    new monacoWebpackPlugin()
+  ],
 };

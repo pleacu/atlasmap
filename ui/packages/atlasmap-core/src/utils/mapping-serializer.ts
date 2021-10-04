@@ -407,7 +407,7 @@ export class MappingSerializer {
       mapping.transition.enableExpression = true;
       mapping.transition.mode = TransitionMode.EXPRESSION;
       mapping.transition.expression = new ExpressionModel(mapping, cfg);
-      mapping.transition.expression.insertText(mappingJson.expression);
+      mapping.transition.expression.insertText(mappingJson.expression, true);
     }
 
     for (const field of mappingJson.outputField) {

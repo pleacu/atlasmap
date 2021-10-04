@@ -14,6 +14,14 @@
     limitations under the License.
 */
 import {
+  ConfigModel,
+  DocumentInitializationModel,
+  DocumentType,
+  InspectionType,
+  MappingSerializer,
+  TransitionMode,
+} from '@atlasmap/core';
+import {
   DataActionPayload,
   IDataState,
   INotificationsState,
@@ -22,13 +30,6 @@ import {
   initNotificationsState,
   notificationsReducer,
 } from './reducers';
-import {
-  DocumentInitializationModel,
-  DocumentType,
-  InspectionType,
-  MappingSerializer,
-  TransitionMode,
-} from '@atlasmap/core';
 import { IAtlasmapDocument, IAtlasmapField } from '../Views';
 import React, {
   FunctionComponent,
@@ -63,6 +64,7 @@ import {
   fromMappedFieldToIMappingField,
   fromMappingDefinitionToIMappings,
   fromMappingModelToImapping,
+  getAtlasmapLanguage,
   getEnumerationValues,
   getFieldEnums,
   getMappingActions,
@@ -85,10 +87,8 @@ import {
   initializationService,
   isEnumerationMapping,
   mappingExpressionAddField,
-  mappingExpressionClearText,
   mappingExpressionInit,
   mappingExpressionInsertText,
-  mappingExpressionObservable,
   mappingExpressionRemoveField,
   newMapping,
   onFieldPreviewChange,
@@ -102,7 +102,6 @@ import {
   toggleMappingPreview,
   toggleShowMappedFields,
   toggleShowUnmappedFields,
-  trailerId,
 } from './utils';
 
 import { LogLevelDesc } from 'loglevel';
@@ -250,7 +249,7 @@ export const AtlasmapProvider: FunctionComponent<IAtlasmapProviderProps> = ({
     ],
   );
 
-  const configModel = initializationService.cfg;
+  const configModel = ConfigModel.getConfig();
 
   const convertSources = useCallback(
     function convertSourcesCb() {
@@ -462,7 +461,7 @@ export function useAtlasmap() {
     );
   }
 
-  const configModel = initializationService.cfg;
+  const configModel = ConfigModel.getConfig();
 
   const { onLoading, onReset, ...state } = context;
 
@@ -650,15 +649,14 @@ export function useAtlasmap() {
     resetAtlasmap: handleResetAtlasmap,
     getUIVersion: getUIVersion,
     getRuntimeVersion: getRuntimeVersion,
-    mappingExpressionClearText,
     isMappingExpressionEmpty,
     executeFieldSearch,
     getFieldEnums,
     setSelectedEnumValue,
+    getAtlasmapLanguage,
     mappingExpressionAddField,
     mappingExpressionInit,
     mappingExpressionInsertText,
-    mappingExpressionObservable,
     mappingExpressionRemoveField,
     mappingHasSourceCollection,
     mappingExpressionEnabled:
@@ -699,7 +697,6 @@ export function useAtlasmap() {
     createProperty,
     deleteProperty,
     editProperty,
-    trailerId,
     canAddToSelectedMapping,
     isFieldAddableToSelection,
     isFieldRemovableFromSelection,

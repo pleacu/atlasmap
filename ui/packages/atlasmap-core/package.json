@@ -41,6 +41,7 @@
     "file-saver": "^2.0.5",
     "ky": "~0.17.0",
     "loglevel": "^1.7.1",
+    "monaco-editor": "^0.26.1",
     "pako": "^2.0.3",
     "rxjs": "^6.6.7"
   },
@@ -68,6 +69,7 @@
       "\\.(css|less)$": "<rootDir>/test/__mocks__/styleMock.js",
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/__mocks__/fileMock.js",
       "ky": "ky/umd",
+      "monaco-editor": "monaco-editor/esm/vs/editor/editor.api.d.ts",
       "@src": "<rootDir>/src/index.ts",
       "@src/(.*)": "<rootDir>/src/$1",
       "@test/(.*)": "<rootDir>/test/$1"

@@ -357,7 +357,6 @@ export class MappingManagementService {
     // TODO: this seems very unintuitive, seems like some step to explicitly
     // add the new mapping would make more sense
     this.selectMapping(mapping);
-    this.notifyMappingUpdated();
   }
 
   selectMapping(mappingModel: MappingModel) {
@@ -368,6 +367,7 @@ export class MappingManagementService {
     this.cfg.mappings!.activeMapping = mappingModel; // TODO: check this non null operator
     this.cfg.showMappingDetailTray = true;
     this.mappingUpdatedSource.next();
+    this.notifyMappingUpdated(); // pleacu - needed to trigger expression content
   }
 
   deselectMapping(): void {

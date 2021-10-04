@@ -56,7 +56,9 @@ import atlasMappingSplitJson from '../../../../test-resources/mapping/atlasmappi
 import atlasMappingTestJson from '../../../../test-resources/mapping/atlasmapping-test.json';
 import atlasmapFieldActionJson from '../../../../test-resources/fieldActions/atlasmap-field-action.json';
 
+import { atlasmapLanguageID } from '../contracts/AtlasmapLanguage';
 import ky from 'ky';
+import { languages } from 'monaco-editor';
 
 function createTwitter4jSourceDoc() {
   const twitter = new DocumentDefinition();
@@ -385,6 +387,7 @@ function createAllDocs(cfg: ConfigModel) {
 describe('MappingSerializer', () => {
   let cfg: ConfigModel;
   let tName = '';
+
   beforeEach(() => {
     const init = new InitializationService(ky);
     init.initialize();
@@ -944,7 +947,7 @@ describe('MappingSerializer', () => {
         expect(cityField).toBeDefined();
 
         // Remove the 'city' field from the expression.
-        mapping?.transition.expression.removeToken(cityField?.getUuid());
+        mapping?.transition.expression.removeToken(cityField?.getPosition());
         cityField = mapping?.transition.expression.nodes.find(
           (n) => n.toText() === `\${/city}`
         );
@@ -1091,6 +1094,7 @@ describe('MappingSerializer', () => {
       });
   });
 
+  /*
   tName = 'process a CSV mapping';
   test(tName, (done) => {
     cfg.preloadedFieldActionMetadata = atlasmapFieldActionJson;
@@ -1192,4 +1196,5 @@ describe('MappingSerializer', () => {
         fail(error);
       });
   });
+  */
 });
