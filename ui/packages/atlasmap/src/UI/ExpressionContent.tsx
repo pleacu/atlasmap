@@ -250,7 +250,7 @@ export const ExpressionContent: FunctionComponent<IExpressionContentProps> = ({
       find: {
         addExtraSpaceOnTop: false,
         autoFindInSelection: 'never',
-        seedSearchStringFromSelection: false,
+        seedSearchStringFromSelection: 'never',
       },
       folding: false,
       glyphMargin: false,
