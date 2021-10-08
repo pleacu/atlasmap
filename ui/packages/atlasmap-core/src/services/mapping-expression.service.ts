@@ -59,20 +59,22 @@ export class MappingExpressionService {
     this.cfg = ConfigModel.getConfig();
     this.cfg.atlasmapLanguageID = atlasmapLanguageID;
 
-    // Define a monaco monarch language extension point.
-    languages.register({ id: atlasmapLanguageID });
+    if (languages) {
+      // Define a monaco monarch language extension point.
+      languages.register({ id: atlasmapLanguageID });
 
-    // Register a language configuration for the Atlasmap language.
-    languages.setLanguageConfiguration(
-      atlasmapLanguageID,
-      atlasmapLanguageConfig as languages.LanguageConfiguration
-    );
+      // Register a language configuration for the Atlasmap language.
+      languages.setLanguageConfiguration(
+        atlasmapLanguageID,
+        atlasmapLanguageConfig as languages.LanguageConfiguration
+      );
 
-    // Register a Monarch tokens provider for the Atlasmap language.
-    languages.setMonarchTokensProvider(
-      atlasmapLanguageID,
-      atlasmapTokensProvider as languages.IMonarchLanguage
-    );
+      // Register a Monarch tokens provider for the Atlasmap language.
+      languages.setMonarchTokensProvider(
+        atlasmapLanguageID,
+        atlasmapTokensProvider as languages.IMonarchLanguage
+      );
+    }
   }
 
   willClearOutSourceFieldsOnTogglingExpression() {

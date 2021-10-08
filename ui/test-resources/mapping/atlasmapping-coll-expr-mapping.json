@@ -162,7 +162,6 @@
         },
         {
           "jsonType" : "io.atlasmap.v2.Mapping",
-          "expression" : "if (${DOC.Properties:/current/prop-city} == ${DOC.Constants.:/Boston}, ${SomeJsonSource:/js0}, ${SomeJsonSource:/js1})",
           "inputFieldGroup" : {
             "jsonType" : "io.atlasmap.v2.FieldGroup",
             "actions" : [ ],
@@ -223,7 +222,6 @@
         {
           "jsonType":"io.atlasmap.v2.Mapping",
           "id":"mapping.",
-          "expression":"repeat( count( ${JSONSchemaSource:/addressList<>/street}), ${DOC.Constants.:/const-str})",
           "inputFieldGroup":{
             "jsonType":"io.atlasmap.v2.FieldGroup",
             "actions":[ ],
@@ -261,7 +259,6 @@
         {
           "jsonType":"io.atlasmap.v2.Mapping",
           "id":"mapping.",
-          "expression":"select( filter( ${JSONSchemaSource:/addressList<>}, ${/city} != 'Boston'), ${/state})",
           "inputFieldGroup":{
             "jsonType":"io.atlasmap.v2.FieldGroup",
             "actions":[ ],

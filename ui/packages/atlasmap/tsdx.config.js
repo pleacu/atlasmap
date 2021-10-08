@@ -27,4 +27,7 @@ module.exports = {
   plugins: [
     new monacoWebpackPlugin()
   ],
+  presets: [
+    ['@babel/preset-env', { targets: { node: 'current' }}]
+  ],
 };

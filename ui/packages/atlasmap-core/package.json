@@ -41,7 +41,7 @@
     "file-saver": "^2.0.5",
     "ky": "~0.17.0",
     "loglevel": "^1.7.1",
-    "monaco-editor": "^0.26.1",
+    "monaco-editor": "^0.28.0",
     "pako": "^2.0.3",
     "rxjs": "^6.6.7"
   },
@@ -79,7 +79,8 @@
       "^.+\\.(ts|tsx)$": "ts-jest"
     },
     "transformIgnorePatterns": [
-      "<rootDir>/node_modules/(?!(ky)/)"
+      "<rootDir>/node_modules/(?!(ky)/)",
+      "<rootDir>/node_modules\/(?!(monaco-editor)\/)"
     ]
   },
   "eslintConfig": {

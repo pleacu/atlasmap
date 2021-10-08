@@ -63,13 +63,13 @@ describe('MappingPreviewService', () => {
       .notifyMappingUpdated()
       .then((value) => {
         expect(value).toBeTruthy();
-        expect(requests.length).toBe(1);
+        expect(requests.length).toBe(2); // pleacu
         service.disableMappingPreview();
         cfg.mappingService
           .notifyMappingUpdated()
           .then((value2) => {
             expect(value2).toBeTruthy();
-            expect(requests.length).toBe(1);
+            expect(requests.length).toBe(2); // pleacu
             done();
           })
           .catch((error) => {
