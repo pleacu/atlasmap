@@ -28,8 +28,11 @@
     "@types/jest": "^24.9.1",
     "@types/text-encoding": "^0.0.36",
     "babel-jest": "^24.9.0",
+    "canvas": "^2.8.0",
     "eslint-plugin-header": "^3.1.1",
     "husky": "^4.2.3",
+    "jest-esm-transformer": "^1.0.0",
+    "jest-matchmedia-mock": "^1.1.0",
     "text-encoding": "^0.7.0",
     "ts-jest": "^24.3.0",
     "tsdx": "^0.13.1",
@@ -76,11 +79,12 @@
     },
     "testEnvironment": "jsdom",
     "transform": {
+      "<rootDir>/node_modules/monaco-editor": "jest-esm-transformer",
       "^.+\\.(ts|tsx)$": "ts-jest"
     },
     "transformIgnorePatterns": [
       "<rootDir>/node_modules/(?!(ky)/)",
-      "<rootDir>/node_modules\/(?!(monaco-editor)\/)"
+      "<rootDir>/node_modules/(?!(monaco-editor)/)"
     ]
   },
   "eslintConfig": {
