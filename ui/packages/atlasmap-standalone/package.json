@@ -95,14 +95,14 @@
   "jest": {
     "moduleNameMapper": {
       "ky": "ky/umd",
-      "monaco-editor": "monaco-editor/esm/vs/editor/editor.api.d.ts"
+      "monaco-editor": "monaco-editor/esm/vs/editor/editor.api.js"
     },
     "transform": {
+      "/node_modules/monaco-editor": "jest-esm-transformer",
       "^.+\\.(ts|tsx)$": "ts-jest"
     },
     "transformIgnorePatterns": [
-      "<rootDir>/node_modules/(?!(ky|@patternfly/react-styles)/)",
-      "<rootDir>/node_modules\/(?!(monaco-editor)\/)"
+      "<rootDir>/node_modules/(?!(ky|@patternfly/react-styles|monaco-editor)/)"
     ]
   }
 }
