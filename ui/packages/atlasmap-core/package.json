@@ -16,7 +16,7 @@
     "start": "tsdx watch",
     "build:module": "tsdx build",
     "build": "npm-run-all build:module lint test",
-    "test": "tsdx test --runInBand",
+    "test": "NODE_OPTIONS=--trace-warnings tsdx test --runInBand",
     "test:coverage": "tsdx test --coverage --runInBand",
     "lint": "tsdx lint src test",
     "format": "yarn lint --fix"
@@ -72,19 +72,21 @@
       "\\.(css|less)$": "<rootDir>/test/__mocks__/styleMock.js",
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/__mocks__/fileMock.js",
       "ky": "ky/umd",
-      "monaco-editor": "monaco-editor/esm/vs/editor/editor.api.d.ts",
+      "monaco-editor": "monaco-editor/esm/vs/editor/editor.api.js",
       "@src": "<rootDir>/src/index.ts",
       "@src/(.*)": "<rootDir>/src/$1",
       "@test/(.*)": "<rootDir>/test/$1"
     },
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/setup.tsx"
+    ],
     "testEnvironment": "jsdom",
     "transform": {
-      "<rootDir>/node_modules/monaco-editor": "jest-esm-transformer",
+      "/node_modules/monaco-editor": "jest-esm-transformer",
       "^.+\\.(ts|tsx)$": "ts-jest"
     },
     "transformIgnorePatterns": [
-      "<rootDir>/node_modules/(?!(ky)/)",
-      "<rootDir>/node_modules/(?!(monaco-editor)/)"
+      "/node_modules/(?!(ky|monaco-editor)/)"
     ]
   },
   "eslintConfig": {
