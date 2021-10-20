@@ -51,7 +51,7 @@ import atlasMappingCSV from '../../../../test-resources/mapping/atlasmapping-csv
 // import atlasMappingCollExprPreview from '../../../../test-resources/mapping/atlasmapping-coll-expr-preview.json';
 // import atlasMappingCollRefExprPreview from '../../../../test-resources/mapping/atlasmapping-coll-ref-expr-preview.json';
 import atlasMappingEnumLookupTableMapping from '../../../../test-resources/mapping/atlasmapping-enum-lookup-table.json';
-// import atlasMappingExprPropJson from '../../../../test-resources/mapping/atlasmapping-expr-prop.json';
+import atlasMappingExprPropJson from '../../../../test-resources/mapping/atlasmapping-expr-prop.json';
 import atlasMappingSplitCollapseJson from '../../../../test-resources/mapping/atlasmapping-split-collapse.json';
 import atlasMappingSplitJson from '../../../../test-resources/mapping/atlasmapping-split.json';
 import atlasMappingTestJson from '../../../../test-resources/mapping/atlasmapping-test.json';
@@ -940,7 +940,6 @@ describe('MappingSerializer', () => {
       .fetchFieldActions()
       .then(() => {
         done(); // monaco
-        /*
         cfg.mappings = new MappingDefinition();
         let fieldMapping = null;
         const mappingJson = atlasMappingExprPropJson as IAtlasMappingContainer;
@@ -974,7 +973,6 @@ describe('MappingSerializer', () => {
         );
         expect(cityField).toBeUndefined();
         done();
-        */
       })
       .catch((error) => {
         fail(error);
